@@ -1,0 +1,13 @@
+void dashedLine(float x1, float y1, float x2, float y2, int lines)  {
+  
+  int points = (lines*2)-1;
+  
+  float xLen = (x2-x1)/points;
+  float yLen = (y2-y1)/points;
+  
+  int i = 0;
+  while(i < points)  {
+    line((xLen*i)+x1, (yLen*i)+y1, (xLen*i)+xLen+x1, (yLen*i)+yLen+y1);
+    i = i + 2;
+  }
+}
